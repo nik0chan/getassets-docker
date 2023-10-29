@@ -8,9 +8,9 @@ RUN apk add --no-cache \
     git vim \ 
     sslscan
 
-RUN pip3 install -U selenium 
-RUN pip3 install dnspython requests webdriver_manager 
-RUN git https://github.com/nik0chan/get_assets.git /get_assets
+RUN pip3 install -U selenium --break-system-packages
+RUN pip3 install dnspython requests webdriver_manager --breack-system-packages
+RUN git clone https://github.com/nik0chan/get_assets.git /get_assets
 
 WORKDIR /get_assets
 
